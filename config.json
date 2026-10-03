@@ -1,9 +1,18 @@
 {
  "banner": {
-  "text": "",
-  "on": false
+  "text": "Hello www.google.com",
+  "on": true
  },
- "ads": [],
+ "ads": [
+  {
+   "co": "",
+   "title": "",
+   "text": "",
+   "cta": "Open",
+   "link": "https://",
+   "on": true
+  }
+ ],
  "set": {
   "notifHour": 8,
   "chatOn": true,
