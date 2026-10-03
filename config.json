@@ -5,11 +5,11 @@
  },
  "ads": [
   {
-   "co": "",
-   "title": "",
-   "text": "",
+   "co": "Google ",
+   "title": "Gaurav ",
+   "text": "Click here ",
    "cta": "Open",
-   "link": "https://",
+   "link": "https://google.com",
    "on": true
   }
  ],
