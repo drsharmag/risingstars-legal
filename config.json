@@ -42,7 +42,9 @@
  ],
  "daily": {
   "2026-10-03": {
-   "Aries": {},
+   "Aries": {
+    "love": "Hi"
+   },
    "Capricorn": {
     "love": "Corn lega mera"
    }
@@ -51,6 +53,11 @@
    "Aries": {},
    "Capricorn": {
     "love": "Corn lega "
+   }
+  },
+  "2026-10-05": {
+   "Aries": {
+    "love": "Hello"
    }
   }
  },
