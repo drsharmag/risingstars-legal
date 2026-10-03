@@ -1,14 +1,37 @@
 {
-  "banner": { "text": "", "on": false },
-  "ads": [],
-  "set": { "notifHour": 8, "chatOn": false, "adGap": 3 },
-  "muhurat": [
-    { "cat": "Vivah", "date": "2026-11-21", "note": "" },
-    { "cat": "Vivah", "date": "2026-11-24", "note": "" },
-    { "cat": "Vivah", "date": "2026-11-25", "note": "" },
-    { "cat": "Vivah", "date": "2026-11-26", "note": "" }
-  ],
-  "daily": {},
-  "i18n": {},
-  "api": ""
+ "banner": {
+  "text": "",
+  "on": false
+ },
+ "ads": [],
+ "set": {
+  "notifHour": 8,
+  "chatOn": true,
+  "adGap": 3
+ },
+ "muhurat": [
+  {
+   "cat": "Vivah",
+   "date": "2026-11-21",
+   "note": ""
+  },
+  {
+   "cat": "Vivah",
+   "date": "2026-11-24",
+   "note": ""
+  },
+  {
+   "cat": "Vivah",
+   "date": "2026-11-25",
+   "note": ""
+  },
+  {
+   "cat": "Vivah",
+   "date": "2026-11-26",
+   "note": ""
+  }
+ ],
+ "daily": {},
+ "i18n": {},
+ "api": ""
 }
