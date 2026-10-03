@@ -40,7 +40,14 @@
    "note": ""
   }
  ],
- "daily": {},
+ "daily": {
+  "2026-10-03": {
+   "Aries": {},
+   "Capricorn": {
+    "love": "Corn lega mera"
+   }
+  }
+ },
  "i18n": {},
  "api": ""
 }
