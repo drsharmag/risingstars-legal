@@ -40,7 +40,10 @@
  "set": {
   "notifHour": 8,
   "chatOn": true,
-  "adGap": 3
+  "adGap": 3,
+  "adp": {},
+  "wa": "919660881896",
+  "debug": false
  },
  "muhurat": [
   {
