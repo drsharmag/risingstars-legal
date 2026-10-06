@@ -43,13 +43,14 @@
   "adGap": 3,
   "adp": {},
   "wa": "919660881896",
-  "debug": true,
+  "debug": false,
   "bc": {
    "id": 1791308504485,
    "title": "Hi ",
    "body": "Notification from dashboard ",
    "on": true
-  }
+  },
+  "pandit": true
  },
  "muhurat": [
   {
