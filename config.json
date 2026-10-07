@@ -43,11 +43,11 @@
   "adGap": 3,
   "adp": {},
   "wa": "919660881896",
-  "debug": false,
+  "debug": true,
   "bc": {
-   "id": 1791352606910,
-   "title": "Hi ",
-   "body": "Click ads",
+   "id": 1791355056470,
+   "title": "Hi",
+   "body": "Click horoscope ",
    "on": true
   },
   "pandit": true
@@ -59,7 +59,7 @@
    "note": "Seema"
   },
   {
-   "cat": "Vivah",
+   "cat": "",
    "date": "2026-11-24",
    "note": "Seema"
   },
