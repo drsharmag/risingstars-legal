@@ -61,17 +61,17 @@
   {
    "cat": "Vivah",
    "date": "2026-11-24",
-   "note": ""
+   "note": "Seema"
   },
   {
    "cat": "Vivah",
    "date": "2026-11-25",
-   "note": ""
+   "note": "Seema"
   },
   {
    "cat": "Vivah",
    "date": "2026-11-26",
-   "note": ""
+   "note": "Seema"
   }
  ],
  "daily": {
@@ -100,6 +100,9 @@
    "Aries": {
     "love": "Seema "
    }
+  },
+  "2026-10-07": {
+   "Aries": {}
   }
  },
  "i18n": {},
