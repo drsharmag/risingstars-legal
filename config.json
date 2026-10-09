@@ -56,33 +56,7 @@
   },
   "pandit": true
  },
- "muhurat": [
-  {
-   "cat": "Vivah",
-   "date": "2026-11-21",
-   "note": "Seema"
-  },
-  {
-   "cat": "Griha Pravesh",
-   "date": "2026-11-24",
-   "note": "Seema"
-  },
-  {
-   "cat": "Vehicle",
-   "date": "2026-11-25",
-   "note": "Seema"
-  },
-  {
-   "cat": "Business",
-   "date": "2026-11-26",
-   "note": "Seema"
-  },
-  {
-   "cat": "Namkaran",
-   "date": "2026-11-25",
-   "note": "Seema"
-  }
- ],
+ "muhurat": [],
  "daily": {
   "2026-10-03": {
    "Aries": {
