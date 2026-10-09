@@ -45,9 +45,9 @@
   "wa": "919660881896",
   "debug": true,
   "bc": {
-   "id": 1791355525868,
-   "title": "Click horoscope ",
-   "body": "Here ",
+   "id": 1791531300369,
+   "title": "Hi ",
+   "body": "Click horoscope ",
    "on": true
   },
   "pandit": true
@@ -102,6 +102,9 @@
    }
   },
   "2026-10-07": {
+   "Aries": {}
+  },
+  "2026-10-09": {
    "Aries": {}
   }
  },
