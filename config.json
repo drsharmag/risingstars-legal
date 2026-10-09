@@ -59,18 +59,23 @@
    "note": "Seema"
   },
   {
-   "cat": "",
+   "cat": "Griha Pravesh",
    "date": "2026-11-24",
    "note": "Seema"
   },
   {
-   "cat": "Vivah",
+   "cat": "Vehicle",
    "date": "2026-11-25",
    "note": "Seema"
   },
   {
-   "cat": "Namkaran",
+   "cat": "Business",
    "date": "2026-11-26",
+   "note": "Seema"
+  },
+  {
+   "cat": "Namkaran",
+   "date": "2026-11-25",
    "note": "Seema"
   }
  ],
