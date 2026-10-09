@@ -7,7 +7,7 @@ const tok = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 const gkey = process.env.GEMINI_API_KEY;
 const note = m => console.log("::error::" + String(m).replace(/\s+/g, " ").slice(0, 400));
 const GH = { Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" };
-let MODELS = ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1"];
+let MODELS = ["openai/gpt-4.1-mini", "openai/gpt-4o-mini"];
 const prompt = (d, signs) => `Write original daily horoscopes for ${d}, for entertainment, for an Indian audience. Signs: ${signs.join(", ")}. For each sign give: love (one friendly sentence, max 18 words), work (one sentence, max 18 words), love_hi and work_hi (the same two sentences in natural Hindi), num (lucky number 1-99), col (lucky colour in English). No medical, money-guarantee, death or accident predictions. Do not mention the date. Return ONLY JSON: {"Aries":{"love":"","work":"","love_hi":"","work_hi":"","num":7,"col":"Gold"}} with exactly these signs.`;
 const parse = s => JSON.parse(String(s).replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/, ""));
 async function pickModels() {
@@ -27,8 +27,9 @@ async function github(p) {
       const r = await fetch("https://models.github.ai/inference/chat/completions", { method: "POST",
         headers: { ...GH, "Content-Type": "application/json", Authorization: "Bearer " + tok },
         body: JSON.stringify({ model: m, messages: [{ role: "user", content: p }], temperature: 0.9, response_format: { type: "json_object" } }) });
-      const j = await r.json().catch(() => ({}));
-      if (r.ok) return parse(j.choices[0].message.content);
+      const t = await r.text(); let j;
+      try { j = JSON.parse(t); } catch (e) { last = m + " -> HTTP " + r.status + " reply was not JSON: " + JSON.stringify(t.slice(0, 120)); continue; }
+      if (r.ok && j.choices && j.choices[0]) return parse(j.choices[0].message.content);
       last = m + " -> HTTP " + r.status + " " + JSON.stringify(j).slice(0, 220);
     } catch (e) { last = m + " -> " + e.message; }
   }
@@ -40,7 +41,7 @@ async function gemini(p) {
     const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${gkey}`, { method: "POST",
       headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: p }] }], generationConfig: { responseMimeType: "application/json" } }) });
     const j = await r.json().catch(() => ({}));
-    if (r.ok) return parse(j.candidates[0].content.parts[0].text);
+    if (r.ok && j.candidates && j.candidates[0]) return parse(j.candidates[0].content.parts[0].text);
     last = m + " -> HTTP " + r.status + " " + ((j.error && j.error.message) || "").slice(0, 150);
   }
   throw new Error("Gemini failed: " + last);
@@ -57,7 +58,6 @@ async function chunk(d, signs) {
 }
 (async () => {
   if (!providers.length) { note("No AI is available: the workflow gave no GITHUB_TOKEN and there is no GEMINI_API_KEY secret."); process.exit(1); }
-  await pickModels();
   const out = {};
   for (const d of dates) { out[d] = {}; for (let i = 0; i < 12; i += 4) Object.assign(out[d], await chunk(d, SIGNS.slice(i, i + 4))); }
   const got = dates.reduce((n, d) => n + Object.keys(out[d]).length, 0);
