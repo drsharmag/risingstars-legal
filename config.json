@@ -14,7 +14,7 @@
    "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532325174.jpg"
   },
   {
-   "co": "2",
+   "co": "Flipkart ",
    "title": "FLIPKART BIGBILLON DAY SALE ",
    "text": "Flipkart ",
    "cta": "Open",
@@ -22,19 +22,19 @@
    "on": true
   },
   {
-   "co": "3",
-   "title": "",
-   "text": "Test",
+   "co": "Vijay sales",
+   "title": "Vijay sales",
+   "text": "Vijay sales",
    "cta": "Open",
-   "link": "https://google.com",
+   "link": "https://vijaysales.in",
    "on": true
   },
   {
-   "co": "4",
-   "title": "",
-   "text": "Test",
+   "co": "Amazon",
+   "title": "Amazon prime",
+   "text": "Amazon prime",
    "cta": "Open",
-   "link": "https://yahoo.com",
+   "link": "https://amazon.in",
    "on": true
   }
  ],
