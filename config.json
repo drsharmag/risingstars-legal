@@ -19,7 +19,8 @@
    "text": "Flipkart ",
    "cta": "Open",
    "link": "https://Flipkart.com",
-   "on": true
+   "on": true,
+   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532931078.jpg"
   },
   {
    "co": "Vijay sales",
@@ -27,7 +28,8 @@
    "text": "Vijay sales",
    "cta": "Open",
    "link": "https://vijaysales.in",
-   "on": true
+   "on": true,
+   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532964842.jpg"
   },
   {
    "co": "Amazon",
@@ -35,7 +37,8 @@
    "text": "Amazon prime",
    "cta": "Open",
    "link": "https://amazon.in",
-   "on": true
+   "on": true,
+   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532990439.jpg"
   }
  ],
  "set": {
