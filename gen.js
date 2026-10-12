@@ -37,12 +37,14 @@ async function github(p) {
 }
 async function gemini(p) {
   let last = "";
-  for (const m of ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-flash-latest"]) {
+  for (const m of ["gemini-flash-latest", "gemini-2.5-flash"]) for (let tryN = 0; tryN < 2; tryN++) {
     const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${gkey}`, { method: "POST",
       headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: p }] }], generationConfig: { responseMimeType: "application/json" } }) });
     const j = await r.json().catch(() => ({}));
     if (r.ok && j.candidates && j.candidates[0]) return parse(j.candidates[0].content.parts[0].text);
     last = m + " -> HTTP " + r.status + " " + ((j.error && j.error.message) || "").slice(0, 150);
+    if (r.status !== 503 && r.status !== 429) break;
+    await new Promise(res => setTimeout(res, 5000));
   }
   throw new Error("Gemini failed: " + last);
 }
@@ -60,11 +62,13 @@ async function chunk(d, signs) {
   if (!providers.length) { note("No AI is available: the workflow gave no GITHUB_TOKEN and there is no GEMINI_API_KEY secret."); process.exit(1); }
   const out = {};
   for (const d of dates) { out[d] = {}; for (let i = 0; i < 12; i += 4) Object.assign(out[d], await chunk(d, SIGNS.slice(i, i + 4))); }
+  for (const d of dates) { const miss = SIGNS.filter(s => !out[d][s]); for (let i = 0; i < miss.length; i += 4) Object.assign(out[d], await chunk(d, miss.slice(i, i + 4))); }
   const got = dates.reduce((n, d) => n + Object.keys(out[d]).length, 0);
   console.log("signs written:", got, "of", dates.length * 12);
   if (!got) err("No horoscope was written. Reasons are listed above. If GitHub Models says forbidden or not enabled, add a GEMINI_API_KEY secret.");
   if (!got) { note("No horoscopes were written. The reasons are listed above."); process.exit(1); }
   let old = {}; try { old = JSON.parse(fs.readFileSync("daily.json", "utf8")); } catch (e) {}
   const keep = {}; for (const k of Object.keys(old)) if (k >= day(-2) && !out[k]) keep[k] = old[k];
-  fs.writeFileSync("daily.json", JSON.stringify({ ...keep, ...out }));
+  const merged = { ...keep }; for (const d of dates) merged[d] = { ...(old[d] || {}), ...out[d] };
+  fs.writeFileSync("daily.json", JSON.stringify(merged));
 })();
