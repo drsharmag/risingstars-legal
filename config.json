@@ -21,9 +21,10 @@
   "wa": "919660881896",
   "debug": false,
   "bc": {
-   "title": "",
-   "body": "",
-   "on": false
+   "id": 1793999942558,
+   "title": "Hello ",
+   "body": "This is in app notification ",
+   "on": true
   },
   "pandit": true
  },
