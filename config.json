@@ -1,46 +1,9 @@
 {
  "banner": {
-  "text": "Hello www.google.com yes",
+  "text": "",
   "on": false
  },
- "ads": [
-  {
-   "co": "Google ",
-   "title": "Dhanlakshmi app",
-   "text": "Click here ",
-   "cta": "Open",
-   "link": "https://google.con",
-   "on": true,
-   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532325174.jpg"
-  },
-  {
-   "co": "Flipkart ",
-   "title": "FLIPKART BIGBILLON DAY SALE ",
-   "text": "Flipkart ",
-   "cta": "Open",
-   "link": "https://Flipkart.com",
-   "on": true,
-   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532931078.jpg"
-  },
-  {
-   "co": "Vijay sales",
-   "title": "Vijay sales",
-   "text": "Vijay sales",
-   "cta": "Open",
-   "link": "https://vijaysales.in",
-   "on": true,
-   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532964842.jpg"
-  },
-  {
-   "co": "Amazon",
-   "title": "Amazon prime",
-   "text": "Amazon prime",
-   "cta": "Open",
-   "link": "https://amazon.in",
-   "on": true,
-   "img": "https://raw.githubusercontent.com/drsharmag/risingstars-legal/main/img/1791532990439.jpg"
-  }
- ],
+ "ads": [],
  "set": {
   "notifHour": 8,
   "chatOn": true,
@@ -49,42 +12,14 @@
   "wa": "919660881896",
   "debug": false,
   "bc": {
-   "id": 1791787708321,
-   "title": "Hi",
-   "body": "This is working ",
-   "on": true
+   "title": "",
+   "body": "",
+   "on": false
   },
   "pandit": true
  },
  "muhurat": [],
- "daily": {
-  "2026-10-03": {
-   "Aries": {
-    "love": "Hi"
-   },
-   "Capricorn": {
-    "love": "Corn lega mera"
-   }
-  },
-  "2026-10-04": {
-   "Aries": {
-    "love": "Oye lucky "
-   },
-   "Capricorn": {
-    "love": "Corn lega "
-   }
-  },
-  "2026-10-05": {
-   "Aries": {
-    "love": "Hello"
-   }
-  },
-  "2026-10-06": {
-   "Aries": {
-    "love": "Seema "
-   }
-  }
- },
+ "daily": {},
  "i18n": {},
  "api": ""
 }
