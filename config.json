@@ -28,7 +28,13 @@
   },
   "pandit": true
  },
- "muhurat": [],
+ "muhurat": [
+  {
+   "cat": "Vivah",
+   "date": "2026-11-07",
+   "note": "Ok"
+  }
+ ],
  "daily": {},
  "i18n": {},
  "api": ""
