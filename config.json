@@ -11,12 +11,28 @@
    "cta": "Open",
    "link": "https://",
    "on": true
+  },
+  {
+   "co": "",
+   "title": "",
+   "text": "",
+   "cta": "Open",
+   "link": "https://",
+   "on": true
+  },
+  {
+   "co": "",
+   "title": "",
+   "text": "",
+   "cta": "Open",
+   "link": "https://",
+   "on": true
   }
  ],
  "set": {
   "notifHour": 8,
   "chatOn": true,
-  "adGap": 3,
+  "adGap": 0.5,
   "adp": {},
   "wa": "919660881896",
   "debug": false,
