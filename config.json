@@ -1,7 +1,7 @@
 {
  "banner": {
   "text": "Hi ",
-  "on": true
+  "on": false
  },
  "ads": [
   {
@@ -10,7 +10,7 @@
    "text": "",
    "cta": "Open",
    "link": "https://",
-   "on": true
+   "on": false
   },
   {
    "co": "",
@@ -18,7 +18,7 @@
    "text": "",
    "cta": "Open",
    "link": "https://",
-   "on": true
+   "on": false
   },
   {
    "co": "",
@@ -26,13 +26,14 @@
    "text": "",
    "cta": "Open",
    "link": "https://",
-   "on": true
+   "on": false
   }
  ],
  "set": {
   "notifHour": 8,
-  "chatOn": true,
+  "chatOn": false,
   "adGap": 0.5,
+  "banner": true,
   "adp": {},
   "wa": "919660881896",
   "debug": false,
@@ -40,7 +41,7 @@
    "id": 1793999942558,
    "title": "Hello ",
    "body": "This is in app notification ",
-   "on": true
+   "on": false
   },
   "pandit": true
  },
