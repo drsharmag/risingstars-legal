@@ -43,7 +43,8 @@
    "body": "This is in app notification ",
    "on": false
   },
-  "pandit": true
+  "pandit": true,
+  "adClickLimit": 6
  },
  "muhurat": [
   {
